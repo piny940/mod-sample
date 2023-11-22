@@ -10,6 +10,7 @@ public class ExampleTNT {
 
     public ExampleTNT() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ExampleTNTBlocks.register(modEventBus);
         ExampleTNTItems.register(modEventBus);
     }
 }
