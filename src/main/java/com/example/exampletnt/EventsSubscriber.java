@@ -6,13 +6,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = ExampleTNT.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ExampleTNTEvents {
+public class EventsSubscriber {
     @SubscribeEvent
     public static void creativeTabsBuildEvent(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ExampleTNTItems.SMALL_TNT.get());
+            event.accept(ItemsRegistry.SMALL_TNT.get());
         } else if (event.getTab() == CreativeModeTabs.REDSTONE_BLOCKS) {
-            event.accept(ExampleTNTBlocks.LARGE_TNT.get());
+            event.accept(BlocksRegistry.LARGE_TNT.get());
         }
     }
 }

@@ -8,7 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ExampleTNTItems {
+public class ItemsRegistry {
     private static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ExampleTNT.MOD_ID);
 
@@ -16,7 +16,7 @@ public class ExampleTNTItems {
             () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> LARGE_TNT = ITEMS.register("large_tnt",
-            () -> new BlockItem(ExampleTNTBlocks.LARGE_TNT.get(), new Item.Properties()));
+            () -> new BlockItem(BlocksRegistry.LARGE_TNT.get(), new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
